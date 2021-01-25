@@ -1,5 +1,5 @@
 # duckface_detection
-a classifier for duckfaces
+a classifier to detect a duckface from an image file.
 ## image credits
 All images are taken from the UCF Selfie Data Set:
 
