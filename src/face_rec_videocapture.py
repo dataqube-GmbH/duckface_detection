@@ -20,8 +20,8 @@ args = parser.parse_args()
 path = args.p
 name_shown = args.n
 this_threshold = args.t
-restore = talos.Restore("../resources/trained_classifier/talos_duckface.zip")
-#duck_img = image = cv2.imread("/home/roland/Schreibtisch/Auswertungen/face_rec/duckfacing/kisspng-mallard-duck-goose-bird-duck-5ab3b80da08ce0.1029030415217275016576.jpeg")
+restore = talos.Restore("../resources/trained_classifier/talos_duckface/talos_duckface.zip")
+duck_img = cv2.imread("/home/roland/Bilder/df.jpg")
 
 # This is a demo of running face recognition on live video from your webcam. It's a little more complicated than the
 # other example, but it includes some basic performance tweaks to make things run a lot faster:
@@ -95,7 +95,7 @@ while True:
             face_names.append(name)
             
 ###########add duckface detector #####################################################################################################################################
-        pred = detector_file.df_detector.df_classification(rgb_small_frame,threshold=this_threshold, predict_proba=False)
+        pred = detector_file.df_detector.df_classification(rgb_small_frame,threshold=this_threshold)
         print(pred)
     #################################################################################################################################################
 
