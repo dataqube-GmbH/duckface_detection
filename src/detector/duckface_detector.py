@@ -13,7 +13,7 @@ from matplotlib.gridspec import GridSpec
 
 class DuckfaceDetector:
     def __init__(self, threshold: float = 0.5, predict_proba: bool = True):
-        self.model = talos.Restore("resources/trained_classifier/talos_duckface/talos_duckface.zip").model
+        self.model = talos.Restore("../resources/trained_classifier/talos_duckface/talos_duckface.zip").model
         self.threshold = threshold
         self.predict_proba = predict_proba
 
