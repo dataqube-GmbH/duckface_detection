@@ -3,13 +3,11 @@ import pandas as pd
 import talos
 from face_recognition import face_landmarks
 
-#exple_path = '../resources/images/duckface_example_1.jpg'
-#example_path = glob.glob("/home/roland/workspace/duckface_detection/resources/images/*")[0]
-#image = load_image_file(img_path)
-class df_detector:
 
-    def df_classification(image, threshold=0.5):
-        restore = talos.Restore("../resources/trained_classifier/talos_duckface/talos_duckface.zip")
+class DuckfaceDetectorFile:
+
+    def classifier(image, threshold=0.5):
+        restore = talos.Restore("../../resources/trained_classifier/talos_duckface/talos_duckface.zip")
         face_landmarks_list = face_landmarks(image)
         height, width, dim = image.shape
         pred = 0
